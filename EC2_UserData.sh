@@ -16,7 +16,7 @@ apt-get install -y python3.9 python3-pip python3.9-distutils sqlite3
 git clone https://github.com/YaeshwanthUrumaiya/RAGSync-Logs_ToHost.git
 
 # Copy the cloned contents to the current directory
-cp -R RAGSync-Logs_ToHost/* .
+cp -R RAGSync-Logs_ToHost/* /root
 
 # Install requirements
 pip install -r requirements.txt --break-system-packages

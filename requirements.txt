@@ -1,6 +1,35 @@
 torch==2.4.1 -f https://download.pytorch.org/whl/cpu
 streamlit
 boto3
+mpmath --no-deps
+urllib3 --no-deps
+typing_extensions --no-deps
+sympy --no-deps
+safetensors --no-deps
+regex --no-deps
+pyyaml --no-deps
+Pillow --no-deps
+packaging --no-deps
+numpy --no-deps
+networkx --no-deps
+MarkupSafe --no-deps
+joblib --no-deps
+idna --no-deps
+fsspec --no-deps
+filelock --no-deps
+colorama --no-deps
+charset-normalizer --no-deps
+certifi --no-deps
+tqdm --no-deps
+scipy --no-deps
+requests --no-deps
+jinja2 --no-deps
+scikit-learn --no-deps
+huggingface_hub --no-deps
+tokenizers --no-deps
+transformers --no-deps
+sentence_transformer --no-deps
+faiss-cpu
 langchain
 langchain-aws
 langchain-community

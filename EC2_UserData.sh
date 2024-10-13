@@ -20,3 +20,6 @@ cp -R RAGSync-Logs_ToHost/* /root
 
 # Install requirements
 pip install -r requirements.txt --break-system-packages
+
+# Exit 
+exit

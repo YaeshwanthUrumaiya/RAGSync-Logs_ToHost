@@ -1,0 +1,8 @@
+streamlit
+boto3
+langchain
+langchain-aws
+langchain-community
+langchain-core
+rank-bm25
+torch==2.4.1 -f https://download.pytorch.org/whl/cpu

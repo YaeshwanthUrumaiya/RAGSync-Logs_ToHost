@@ -24,5 +24,6 @@ pip install --no-cache-dir streamlit boto3 --break-system-packages
 pip install --no-cache-dir torch==2.4.1 --index-url https://download.pytorch.org/whl/cpu --break-system-packages
 pip install --no-cache-dir --no-deps mpmath urllib3 typing_extensions threadpoolctl sympy safetensors regex pyyaml Pillow packaging numpy networkx MarkupSafe joblib idna fsspec filelock colorama charset-normalizer certifi tqdm scipy requests jinja2 scikit-learn huggingface_hub tokenizers transformers sentence_transformers --break-system-packages
 pip install --no-cache-dir faiss-cpu langchain langchain-aws langchain-community langchain-core rank-bm25 --break-system-packages
+pip install python-dotenv --break-system-packages
 
 echo "Setup completed successfully!"

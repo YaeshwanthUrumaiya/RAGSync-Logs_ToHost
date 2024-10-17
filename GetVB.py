@@ -5,6 +5,7 @@ import boto3
 import shutil
 import argparse
 from pathlib import Path
+from dotenv import load_dotenv
 from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 
 def ensure_folder_exists(folder_path):
@@ -55,6 +56,7 @@ if __name__ == '__main__':
         aws_secret_key = args.secretkey
     else:
         print("Using Default User")
+        load_dotenv()
         aws_access_key = os.getenv('AWS_ACCESS_KEY_ID')
         aws_secret_key = os.getenv('AWS_SECRET_ACCESS_KEY')
     

@@ -3,6 +3,7 @@ import os
 import boto3
 import argparse
 import streamlit as st
+from dotenv import load_dotenv
 from langchain_aws import ChatBedrock
 from langchain.load import dumps, loads
 from langchain.prompts import ChatPromptTemplate
@@ -53,6 +54,7 @@ def reciprocal_rank_fusion(results, k=60):
 def Setup(embedmodel):
     print('hello, setup starts')
     
+    load_dotenv()
     aws_access_key = os.getenv('AWS_ACCESS_KEY_ID')
     aws_secret_key = os.getenv('AWS_SECRET_ACCESS_KEY')
     

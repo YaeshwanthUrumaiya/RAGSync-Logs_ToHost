@@ -5,6 +5,7 @@ import boto3
 import shutil
 import argparse
 from pathlib import Path
+from dotenv import load_dotenv
 
 def ensure_folder_exists(folder_path):
     main_file_path = folder_path
@@ -50,6 +51,11 @@ if __name__ == '__main__':
     Bucket_Name = args.bucketname
     main_file_path = "./SupportingDoc/" if args.doctype == "SD" else "./RawDoc/"
     ensure_folder_exists(main_file_path)
+    
+    load_dotenv()
+    aws_access_key = os.getenv('AWS_ACCESS_KEY_ID')
+    aws_secret_key = os.getenv('AWS_SECRET_ACCESS_KEY')
+    
     client = boto3.client('s3', aws_access_key_id=aws_access_key, aws_secret_access_key=aws_secret_key)
     resource = boto3.resource('s3', aws_access_key_id=aws_access_key, aws_secret_access_key=aws_secret_key)
     download_dir(client, resource, '', main_file_path, bucket=Bucket_Name)

@@ -5,6 +5,7 @@ import boto3
 import shutil
 import argparse
 from pathlib import Path
+from dotenv import load_dotenv
 from langchain_community.vectorstores import FAISS
 from langchain.document_loaders import DirectoryLoader
 from langchain_community.document_loaders import TextLoader
@@ -61,6 +62,11 @@ if __name__ == '__main__':
     hf_embeddings = SetupEmbedding(model_name)
     SetupVectorDatabase(files_path,vb_path,hf_embeddings)
     Bucket_Name = args.endbucketname
+    
+    load_dotenv()
+    aws_access_key = os.getenv('AWS_ACCESS_KEY_ID')
+    aws_secret_key = os.getenv('AWS_SECRET_ACCESS_KEY')
+    
     s3 = boto3.client("s3") 
     s3.upload_file(Filename=vb_path + "/" + "index.faiss", Bucket=Bucket_Name, Key=vb_path[2:]+"/index.faiss")
     s3.upload_file(Filename=vb_path + "/" + "index.pkl", Bucket=Bucket_Name, Key=vb_path[2:]+"/index.pkl")

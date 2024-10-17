@@ -49,8 +49,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     
     parser.add_argument("--doctype", type=str, default="RD", help="SD for SupportingDoc; RD for RawDocs")
-    parser.add_argument("--endbucketname", type=str, default="BAAI/bge-base-en-v1.5", help="FinalBucketname")
-    parser.add_argument("--embedmodel", type=str, default="BAAI/bge-base-en-v1.5", help="SD for SupportingDoc; RD for RawDocs")
+    parser.add_argument("--endbucketname", type=str, help="FinalBucketname")
+    parser.add_argument("--embedmodel", type=str, default="BAAI/bge-small-en", help="SD for SupportingDoc; RD for RawDocs")
     
     args = parser.parse_args()
     

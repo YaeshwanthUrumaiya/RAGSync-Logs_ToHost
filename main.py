@@ -163,7 +163,7 @@ if __name__ == '__main__':
         st.session_state.chat_history = []
     if 'state_setup' not in st.session_state:
         parser = argparse.ArgumentParser()
-        parser.add_argument("--embedmodel", type=str, default="BAAI/bge-base-en-v1.5", help="SD for SupportingDoc; RD for RawDocs")
+        parser.add_argument("--embedmodel", type=str, default="BAAI/bge-small-en", help="SD for SupportingDoc; RD for RawDocs")
         args = parser.parse_args()
         bedrock, llm, splits, SDsplits, Sdb, Mdb, retriever, retriever_SD, ensemble_retriever = Setup(embedmodel=args.embedmodel)
         st.session_state.state_setup = [bedrock, llm, splits, SDsplits, Sdb, Mdb, retriever, retriever_SD, ensemble_retriever]

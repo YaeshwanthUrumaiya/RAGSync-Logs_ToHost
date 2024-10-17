@@ -42,7 +42,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     
     parser.add_argument("--bucketname", type=str, default="", help="s3 Bucket name")
-    parser.add_argument("--embedmodel", type=str, default="BAAI/bge-base-en-v1.5", help="SD for SupportingDoc; RD for RawDocs")
+    parser.add_argument("--embedmodel", type=str, default="BAAI/bge-small-en", help="SD for SupportingDoc; RD for RawDocs")
     parser.add_argument("--customacc", type=bool, default=False, help="Enable custom account")
     parser.add_argument("--accesskey", type=str, default="", help="Access key")
     parser.add_argument("--secretkey", type=str, default="", help="Secret key")
